@@ -15,54 +15,63 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
+            background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 50%, #e3f2fd 100%);
             transition: all 0.3s ease;
         }
         
         header {
-            background-color: #f8f9fa;
-            color: #333;
-            padding: 30px;
+            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            color: #fff;
+            padding: 40px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(25, 118, 210, 0.3);
         }
         
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #4a6fa5;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
             transition: transform 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
         header h1:hover {
             transform: scale(1.05);
         }
         
+        header p {
+            color: #e3f2fd;
+            font-size: 1.1rem;
+        }
+        
         nav {
             background-color: #ffffff;
             padding: 15px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(25, 118, 210, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
+            border-bottom: 3px solid #1976d2;
         }
         
         nav a {
-            color: #333;
+            color: #1976d2;
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 10px;
             border-radius: 20px;
             transition: all 0.3s ease;
             font-weight: 500;
+            border: 2px solid transparent;
         }
         
         nav a:hover {
-            background-color: #4a6fa5;
+            background-color: #1976d2;
             color: #fff;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(74, 111, 165, 0.2);
+            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+            border-color: #1976d2;
         }
         
         main {
@@ -70,8 +79,9 @@
             margin: 30px auto;
             padding: 30px;
             background-color: #fff;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(25, 118, 210, 0.1);
+            border-radius: 15px;
+            border: 1px solid #e3f2fd;
         }
         
         section {
@@ -89,26 +99,39 @@
         }
         
         h2 {
-            color: #4a6fa5;
+            color: #1976d2;
             margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 2px solid #eaeaea;
+            border-bottom: 3px solid #42a5f5;
             font-size: 1.8rem;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #1976d2;
         }
         
         .feature {
             display: flex;
             margin-bottom: 30px;
             align-items: center;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 25px;
+            border-radius: 15px;
             transition: all 0.3s ease;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+            border: 1px solid #bbdefb;
         }
         
         .feature:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(25, 118, 210, 0.15);
+            border-color: #42a5f5;
         }
         
         .feature img {
@@ -116,12 +139,14 @@
             height: 180px;
             object-fit: cover;
             margin-right: 30px;
-            border-radius: 10px;
+            border-radius: 15px;
             transition: transform 0.3s ease;
+            border: 3px solid #42a5f5;
         }
         
         .feature:hover img {
             transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(25, 118, 210, 0.3);
         }
         
         .feature-content {
@@ -129,23 +154,28 @@
         }
         
         .feature-content h3 {
-            color: #333;
+            color: #1976d2;
             margin-bottom: 10px;
             font-size: 1.3rem;
         }
         
         footer {
-            background-color: #f8f9fa;
-            color: #666;
+            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            color: #fff;
             text-align: center;
             padding: 30px;
             margin-top: 50px;
-            border-top: 1px solid #eaeaea;
+            box-shadow: 0 -4px 20px rgba(25, 118, 210, 0.2);
+        }
+        
+        footer p {
+            color: #e3f2fd;
+            margin-bottom: 5px;
         }
         
         .button {
             display: inline-block;
-            background-color: #4a6fa5;
+            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
             color: #fff;
             padding: 12px 24px;
             text-decoration: none;
@@ -153,19 +183,30 @@
             margin-top: 15px;
             font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(74, 111, 165, 0.2);
+            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+            border: none;
         }
         
         .button:hover {
-            background-color: #3a5a85;
+            background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(74, 111, 165, 0.3);
+            box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
         }
         
         p {
             margin-bottom: 15px;
             line-height: 1.8;
             color: #555;
+        }
+        
+        ul {
+            margin-left: 20px;
+            color: #555;
+        }
+        
+        ul li {
+            margin-bottom: 8px;
+            line-height: 1.6;
         }
         
         @media (max-width: 768px) {
@@ -218,7 +259,7 @@
         <section id="home">
             <h2>个人简历</h2>
             <div class="feature">
-                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20portrait%20headshot%20asian%20male%20business%20casual&image_size=square" alt="个人照片">
+                <img src="file:///C:/Users/wmq30/Desktop/1396012_20220902165820929020_0.jpg" alt="个人照片" id="profile-img">
                 <div class="feature-content">
                     <h3>张明</h3>
                     <p>求职意向：前端开发工程师</p>
@@ -229,6 +270,8 @@
                 </div>
             </div>
             <p>您好！我是张明，一名热爱编程和设计的前端开发工程师。我拥有5年的前端开发经验，专注于创建美观、响应式的网站和应用程序。我热衷于学习新技术，并将其应用到实际项目中，以提供最佳的用户体验。</p>
+            <p>在过去的几年里，我参与了多个大型项目的开发，积累了丰富的实战经验。我擅长使用现代前端框架，如React和Vue，能够快速构建高性能的Web应用。同时，我也注重代码质量和团队协作，善于与设计师、后端开发人员和产品经理沟通。</p>
+            <p>除了技术能力，我还具备良好的学习能力和解决问题的能力。我喜欢挑战自己，不断探索新的技术领域，努力成为一名优秀的前端工程师。我相信，通过我的努力和专业知识，能够为团队带来价值，创造出更好的产品。</p>
         </section>
         
         <section id="about">
@@ -236,6 +279,16 @@
             <p>我是一个充满激情和创造力的前端开发工程师，拥有扎实的技术基础和丰富的项目经验。我注重细节，追求完美，善于解决复杂的技术问题。</p>
             <p>我的专业背景包括计算机科学，并且我一直保持着对前端技术的学习和探索。我熟悉现代前端开发工具和框架，能够快速适应新的技术环境。</p>
             <p>在工作中，我注重团队合作，善于与设计师、后端开发人员和产品经理沟通协作，确保项目的顺利进行和高质量交付。</p>
+            <p><strong>个人特质：</strong></p>
+            <ul>
+                <li>具备良好的沟通能力和团队协作精神</li>
+                <li>对新技术保持敏锐的洞察力和学习热情</li>
+                <li>注重代码质量，追求优雅的解决方案</li>
+                <li>善于分析问题，能够快速定位和解决技术难题</li>
+                <li>具备良好的时间管理能力，能够高效完成工作任务</li>
+            </ul>
+            <p><strong>职业目标：</strong></p>
+            <p>我希望能够在一家充满活力和创新精神的公司工作，与优秀的团队一起成长。我渴望参与具有挑战性的项目，不断提升自己的技术能力，成为一名技术专家和团队领导者。</p>
         </section>
         
         <section id="education">
@@ -343,6 +396,146 @@
                 });
             });
         });
+
+        // 添加回到顶部按钮
+        const backToTopBtn = document.createElement('button');
+        backToTopBtn.innerHTML = '↑';
+        backToTopBtn.style.cssText = `
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.4);
+            display: none;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        `;
+        document.body.appendChild(backToTopBtn);
+
+        // 滚动时显示/隐藏回到顶部按钮
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        // 回到顶部功能
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 回到顶部按钮悬停效果
+        backToTopBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+        });
+        backToTopBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        // 图片点击放大效果
+        const profileImg = document.getElementById('profile-img');
+        if (profileImg) {
+            profileImg.style.cursor = 'pointer';
+            profileImg.addEventListener('click', function() {
+                if (this.style.transform === 'scale(1.5)') {
+                    this.style.transform = 'scale(1)';
+                } else {
+                    this.style.transform = 'scale(1.5)';
+                }
+            });
+        }
+
+        // 给所有feature卡片添加点击效果
+        document.querySelectorAll('.feature').forEach((card, index) => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function() {
+                // 添加点击动画
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = 'translateY(-5px)';
+                }, 100);
+            });
+        });
+
+        // 添加滚动时的渐入效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry, index) {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // 添加欢迎提示
+        setTimeout(function() {
+            const welcomeMsg = document.createElement('div');
+            welcomeMsg.innerHTML = '👋 欢迎访问我的个人简历！';
+            welcomeMsg.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+                color: white;
+                padding: 15px 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 20px rgba(25, 118, 210, 0.3);
+                z-index: 9999;
+                font-weight: 500;
+                animation: slideDown 0.5s ease;
+            `;
+            document.body.appendChild(welcomeMsg);
+
+            // 添加动画样式
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideDown {
+                    from {
+                        opacity: 0;
+                        transform: translateX(-50%) translateY(-100%);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(0);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // 3秒后自动消失
+            setTimeout(() => {
+                welcomeMsg.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                welcomeMsg.style.opacity = '0';
+                welcomeMsg.style.transform = 'translateX(-50%) translateY(-100%)';
+                setTimeout(() => {
+                    welcomeMsg.remove();
+                }, 500);
+            }, 3000);
+        }, 1000);
     </script>
 </body>
 </html>
