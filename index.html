@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你好，欢迎来到我的世界</title>
+    <title>个人简历</title>
     <style>
         * {
             margin: 0;
@@ -15,63 +15,58 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 50%, #e3f2fd 100%);
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 50%, #f0f8ff 100%);
         }
         
         header {
-            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            background: linear-gradient(135deg, #6495ed 0%, #87cefa 100%);
             color: #fff;
             padding: 40px;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(25, 118, 210, 0.3);
+            box-shadow: 0 4px 20px rgba(100, 149, 237, 0.2);
         }
         
         header h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 15px;
             color: #ffffff;
-            transition: transform 0.3s ease;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
-        header h1:hover {
-            transform: scale(1.05);
-        }
-        
         header p {
-            color: #e3f2fd;
-            font-size: 1.1rem;
+            color: #f0f8ff;
+            font-size: 1.2rem;
+            font-weight: 300;
         }
         
         nav {
             background-color: #ffffff;
             padding: 15px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(25, 118, 210, 0.1);
+            box-shadow: 0 2px 10px rgba(100, 149, 237, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 3px solid #1976d2;
+            border-bottom: 3px solid #6495ed;
         }
         
         nav a {
-            color: #1976d2;
+            color: #6495ed;
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 10px;
             border-radius: 20px;
             transition: all 0.3s ease;
-            font-weight: 500;
+            font-weight: 600;
             border: 2px solid transparent;
         }
         
         nav a:hover {
-            background-color: #1976d2;
+            background-color: #6495ed;
             color: #fff;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
-            border-color: #1976d2;
+            box-shadow: 0 4px 12px rgba(100, 149, 237, 0.2);
+            border-color: #6495ed;
         }
         
         main {
@@ -79,32 +74,25 @@
             margin: 30px auto;
             padding: 30px;
             background-color: #fff;
-            box-shadow: 0 0 30px rgba(25, 118, 210, 0.1);
+            box-shadow: 0 0 30px rgba(100, 149, 237, 0.1);
             border-radius: 15px;
-            border: 1px solid #e3f2fd;
+            border: 1px solid #f0f8ff;
         }
         
         section {
             margin-bottom: 40px;
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeIn 0.6s ease forwards;
-        }
-        
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         
         h2 {
-            color: #1976d2;
+            color: #6495ed;
             margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 3px solid #42a5f5;
-            font-size: 1.8rem;
+            border-bottom: 3px solid #87cefa;
+            font-size: 2.2rem;
             position: relative;
+            font-weight: 700;
         }
         
         h2::after {
@@ -114,7 +102,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background-color: #1976d2;
+            background-color: #6495ed;
         }
         
         .feature {
@@ -124,14 +112,14 @@
             padding: 25px;
             border-radius: 15px;
             transition: all 0.3s ease;
-            background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
-            border: 1px solid #bbdefb;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+            border: 1px solid #b0c4de;
         }
         
         .feature:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(25, 118, 210, 0.15);
-            border-color: #42a5f5;
+            box-shadow: 0 10px 25px rgba(100, 149, 237, 0.1);
+            border-color: #87cefa;
         }
         
         .feature img {
@@ -140,13 +128,14 @@
             object-fit: cover;
             margin-right: 30px;
             border-radius: 15px;
+            border: 3px solid #87cefa;
+            cursor: pointer;
             transition: transform 0.3s ease;
-            border: 3px solid #42a5f5;
         }
         
-        .feature:hover img {
+        .feature img:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(25, 118, 210, 0.3);
+            box-shadow: 0 8px 20px rgba(100, 149, 237, 0.2);
         }
         
         .feature-content {
@@ -154,43 +143,84 @@
         }
         
         .feature-content h3 {
-            color: #1976d2;
+            color: #6495ed;
             margin-bottom: 10px;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
         
         footer {
-            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            background: linear-gradient(135deg, #6495ed 0%, #87cefa 100%);
             color: #fff;
             text-align: center;
             padding: 30px;
             margin-top: 50px;
-            box-shadow: 0 -4px 20px rgba(25, 118, 210, 0.2);
+            box-shadow: 0 -4px 20px rgba(100, 149, 237, 0.2);
         }
         
         footer p {
-            color: #e3f2fd;
+            color: #f0f8ff;
             margin-bottom: 5px;
+            font-size: 1.1rem;
         }
         
         .button {
             display: inline-block;
-            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            background: linear-gradient(135deg, #6495ed 0%, #87cefa 100%);
             color: #fff;
             padding: 12px 24px;
             text-decoration: none;
             border-radius: 25px;
             margin-top: 15px;
-            font-weight: 500;
+            font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+            box-shadow: 0 4px 15px rgba(100, 149, 237, 0.2);
             border: none;
         }
         
         .button:hover {
-            background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+            background: linear-gradient(135deg, #4682b4 0%, #6495ed 100%);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+            box-shadow: 0 6px 20px rgba(100, 149, 237, 0.3);
+        }
+        
+        .content-toggle {
+            margin-bottom: 20px;
+        }
+        
+        .toggle-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #6495ed 0%, #87cefa 100%);
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(100, 149, 237, 0.2);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .toggle-btn:hover {
+            background: linear-gradient(135deg, #4682b4 0%, #6495ed 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(100, 149, 237, 0.3);
+        }
+        
+        .toggle-content {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+            border-radius: 10px;
+            border: 1px solid #b0c4de;
+        }
+        
+        .toggle-content.active {
+            display: block;
         }
         
         p {
@@ -259,19 +289,36 @@
         <section id="home">
             <h2>个人简历</h2>
             <div class="feature">
-                <img src="file:///C:/Users/wmq30/Desktop/1396012_20220902165820929020_0.jpg" alt="个人照片" id="profile-img">
+               <img src="image.png" alt="个人照片" id="profile-img">
                 <div class="feature-content">
-                    <h3>张明</h3>
+                    <h3>付付</h3>
                     <p>求职意向：前端开发工程师</p>
                     <p>出生日期：1995年5月15日</p>
                     <p>所在地：北京市朝阳区</p>
-                    <p>邮箱：zhangming@example.com</p>
+                    <p>邮箱：fufu@example.com</p>
                     <p>电话：138-1234-5678</p>
                 </div>
             </div>
-            <p>您好！我是张明，一名热爱编程和设计的前端开发工程师。我拥有5年的前端开发经验，专注于创建美观、响应式的网站和应用程序。我热衷于学习新技术，并将其应用到实际项目中，以提供最佳的用户体验。</p>
-            <p>在过去的几年里，我参与了多个大型项目的开发，积累了丰富的实战经验。我擅长使用现代前端框架，如React和Vue，能够快速构建高性能的Web应用。同时，我也注重代码质量和团队协作，善于与设计师、后端开发人员和产品经理沟通。</p>
-            <p>除了技术能力，我还具备良好的学习能力和解决问题的能力。我喜欢挑战自己，不断探索新的技术领域，努力成为一名优秀的前端工程师。我相信，通过我的努力和专业知识，能够为团队带来价值，创造出更好的产品。</p>
+            <div class="content-toggle">
+                <button class="toggle-btn" onclick="toggleContent('intro1')">了解更多</button>
+                <div id="intro1" class="toggle-content">
+                    <p>您好！我是付付，一名热爱编程和设计的前端开发工程师。我拥有5年的前端开发经验，专注于创建美观、响应式的网站和应用程序。我热衷于学习新技术，并将其应用到实际项目中，以提供最佳的用户体验。</p>
+                </div>
+            </div>
+            
+            <div class="content-toggle">
+                <button class="toggle-btn" onclick="toggleContent('intro2')">项目经验</button>
+                <div id="intro2" class="toggle-content">
+                    <p>在过去的几年里，我参与了多个大型项目的开发，积累了丰富的实战经验。我擅长使用现代前端框架，如React和Vue，能够快速构建高性能的Web应用。同时，我也注重代码质量和团队协作，善于与设计师、后端开发人员和产品经理沟通。</p>
+                </div>
+            </div>
+            
+            <div class="content-toggle">
+                <button class="toggle-btn" onclick="toggleContent('intro3')">职业追求</button>
+                <div id="intro3" class="toggle-content">
+                    <p>除了技术能力，我还具备良好的学习能力和解决问题的能力。我喜欢挑战自己，不断探索新的技术领域，努力成为一名优秀的前端工程师。我相信，通过我的努力和专业知识，能够为团队带来价值，创造出更好的产品。</p>
+                </div>
+            </div>
         </section>
         
         <section id="about">
@@ -370,21 +417,21 @@
         <section id="contact">
             <h2>联系方式</h2>
             <p>如果您对我的简历感兴趣，欢迎随时联系我。</p>
-            <p>邮箱：zhangming@example.com</p>
+            <p>邮箱：fufu@example.com</p>
             <p>电话：138-1234-5678</p>
             <p>地址：北京市朝阳区望京SOHO T3</p>
-            <p>GitHub：github.com/zhangming</p>
-            <p>LinkedIn：linkedin.com/in/zhangming</p>
+            <p>GitHub：github.com/fufu</p>
+            <p>LinkedIn：linkedin.com/in/fufu</p>
         </section>
     </main>
     
     <footer>
-        <p>&copy; 2026 张明个人简历. 保留所有权利.</p>
+        <p>&copy; 2026 付付个人简历. 保留所有权利.</p>
         <p>更新时间：2026年2月19日</p>
     </footer>
     
     <script>
-        // 简单的JavaScript代码，用于平滑滚动
+        // 平滑滚动
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -397,7 +444,7 @@
             });
         });
 
-        // 添加回到顶部按钮
+        // 回到顶部按钮
         const backToTopBtn = document.createElement('button');
         backToTopBtn.innerHTML = '↑';
         backToTopBtn.style.cssText = `
@@ -436,18 +483,9 @@
             });
         });
 
-        // 回到顶部按钮悬停效果
-        backToTopBtn.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.1)';
-        });
-        backToTopBtn.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-
         // 图片点击放大效果
         const profileImg = document.getElementById('profile-img');
         if (profileImg) {
-            profileImg.style.cursor = 'pointer';
             profileImg.addEventListener('click', function() {
                 if (this.style.transform === 'scale(1.5)') {
                     this.style.transform = 'scale(1)';
@@ -457,11 +495,9 @@
             });
         }
 
-        // 给所有feature卡片添加点击效果
+        // 卡片点击效果
         document.querySelectorAll('.feature').forEach((card, index) => {
-            card.style.cursor = 'pointer';
             card.addEventListener('click', function() {
-                // 添加点击动画
                 this.style.transform = 'scale(0.98)';
                 setTimeout(() => {
                     this.style.transform = 'translateY(-5px)';
@@ -469,7 +505,7 @@
             });
         });
 
-        // 添加滚动时的渐入效果
+        // 滚动渐入效果
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -490,7 +526,7 @@
             observer.observe(section);
         });
 
-        // 添加欢迎提示
+        // 欢迎提示
         setTimeout(function() {
             const welcomeMsg = document.createElement('div');
             welcomeMsg.innerHTML = '👋 欢迎访问我的个人简历！';
@@ -499,18 +535,18 @@
                 top: 20px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+                background: linear-gradient(135deg, #6495ed 0%, #87cefa 100%);
                 color: white;
                 padding: 15px 30px;
                 border-radius: 10px;
-                box-shadow: 0 4px 20px rgba(25, 118, 210, 0.3);
+                box-shadow: 0 4px 20px rgba(100, 149, 237, 0.3);
                 z-index: 9999;
-                font-weight: 500;
+                font-weight: 600;
                 animation: slideDown 0.5s ease;
             `;
             document.body.appendChild(welcomeMsg);
 
-            // 添加动画样式
+            // 动画样式
             const style = document.createElement('style');
             style.textContent = `
                 @keyframes slideDown {
@@ -526,7 +562,7 @@
             `;
             document.head.appendChild(style);
 
-            // 3秒后自动消失
+            // 自动消失
             setTimeout(() => {
                 welcomeMsg.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
                 welcomeMsg.style.opacity = '0';
@@ -536,6 +572,16 @@
                 }, 500);
             }, 3000);
         }, 1000);
+
+        // 内容切换功能
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+            } else {
+                content.classList.add('active');
+            }
+        }
     </script>
 </body>
 </html>
